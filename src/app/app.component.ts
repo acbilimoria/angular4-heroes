@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero';
 
 
 export class Hero {
@@ -33,6 +34,7 @@ const HEROES: Hero[] = [
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
+    <hero-detail [hero]="selectedHero"></hero-detail>
     <div *ngIf="selectedHero">
       <h2>{{selectedHero.name}} details!</h2>
       <div><label>id: </label>{{selectedHero.id}}</div>
